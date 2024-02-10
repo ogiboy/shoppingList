@@ -1,0 +1,127 @@
+:root {
+  --delete-color: #d00000;
+  --clear-bg-color: #ffba08;
+  --app-bg-color: #136f63;
+  --addBtn-bg-color: #3f88c5;
+  --page-bg-color: #032b43;
+  --page-text-color: #f4f4f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Palatino, "Palatino Linotype";
+  background-color: var(--page-bg-color);
+}
+
+.App {
+  text-align: center;
+  width: 70%;
+  min-height: fit-content;
+  margin: 20px auto;
+  max-width: 70%;
+}
+
+.App > h1 {
+  font-size: 2.5em;
+  padding: 10px;
+  color: var(--page-text-color);
+}
+
+form {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--page-text-color);
+}
+
+form input {
+  font-size: 1.2em;
+  width: 230px;
+  border-radius: 10px;
+  border-style: none;
+  padding: 1px;
+}
+
+form button {
+  font-size: 1.2em;
+  width: 100px;
+}
+
+fieldset {
+  border-radius: 10px;
+  max-height: fit-content;
+  min-height: 50vh;
+  background-color: var(--app-bg-color);
+  color: var(--page-text-color);
+  width: 100%;
+}
+
+.userItem {
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 5px auto;
+  border: 1px solid var(--page-text-color);
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.closeIcon {
+  cursor: pointer;
+  color: var(--delete-color);
+}
+
+.closeIcon:hover {
+  color: hsl(0, 100%, 70%);
+}
+
+.userItems {
+  padding: 10px 0;
+}
+
+button {
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:active {
+  border-style: inset;
+}
+
+.clearBtn {
+  background-color: var(--clear-bg-color);
+  color: var(--page-text-color);
+}
+
+.clearBtn:hover {
+  background-color: hsl(43, 100%, 30%);
+}
+
+.addBtn {
+  background-color: var(--addBtn-bg-color);
+  color: var(--page-text-color);
+}
+
+.addBtn:hover {
+  background-color: hsl(207, 54%, 30%);
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    width: 100vh;
+  }
+  fieldset {
+    width: 80vh;
+  }
+}
